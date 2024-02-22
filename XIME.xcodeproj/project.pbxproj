@@ -80,8 +80,6 @@
 		C162899319F2ADA800F3289A /* RimeWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C162898919F2ADA800F3289A /* RimeWrapper.m */; };
 		C162899519F2ADA800F3289A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C162898C19F2ADA800F3289A /* main.m */; };
 		C162899619F2ADA800F3289A /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = C162898D19F2ADA800F3289A /* Main.xib */; };
-		C19AE36519F3E73300592E35 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = C19AE36319F3E73300592E35 /* LICENSE.md */; };
-		C19AE36619F3E73300592E35 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C19AE36419F3E73300592E35 /* README.md */; };
 		C1A26E2B19F561C9007BF527 /* RimeTypeDef.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A26E2A19F561C9007BF527 /* RimeTypeDef.m */; };
 		C1FE669D19F24206008E76C5 /* XIMETests.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FE669C19F24206008E76C5 /* XIMETests.m */; };
 /* End PBXBuildFile section */
@@ -92,6 +90,8 @@
 			compilerSpec = com.apple.compilers.proxy.script;
 			filePatterns = "*.md";
 			fileType = pattern.proxy;
+			inputFiles = (
+			);
 			isEditable = 1;
 			name = "Ignore Markdown files";
 			outputFiles = (
@@ -293,8 +293,6 @@
 		C162898B19F2ADA800F3289A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C162898C19F2ADA800F3289A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C162898D19F2ADA800F3289A /* Main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Main.xib; sourceTree = "<group>"; };
-		C19AE36319F3E73300592E35 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		C19AE36419F3E73300592E35 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C19AE68A19F43F1100592E35 /* keysymdef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = keysymdef.h; sourceTree = "<group>"; };
 		C1A26E2719F5447B007BF527 /* RimeTypeDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RimeTypeDef.h; sourceTree = "<group>"; };
 		C1A26E2A19F561C9007BF527 /* RimeTypeDef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RimeTypeDef.m; sourceTree = "<group>"; };
@@ -508,8 +506,6 @@
 		C1FE667719F24206008E76C5 = {
 			isa = PBXGroup;
 			children = (
-				C19AE36319F3E73300592E35 /* LICENSE.md */,
-				C19AE36419F3E73300592E35 /* README.md */,
 				C13DA2BF19F2CD3A004B2348 /* Executables */,
 				C1FE668219F24206008E76C5 /* XIME */,
 				C1FE669919F24206008E76C5 /* XIMETests */,
@@ -614,6 +610,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -695,9 +692,7 @@
 				C162899319F2ADA800F3289A /* RimeWrapper.m in Sources */,
 				C117E22119F9154F00214E70 /* CandidateWindowController.m in Sources */,
 				C162899219F2ADA800F3289A /* InputController.m in Sources */,
-				C19AE36619F3E73300592E35 /* README.md in Sources */,
 				C1A26E2B19F561C9007BF527 /* RimeTypeDef.m in Sources */,
-				C19AE36519F3E73300592E35 /* LICENSE.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,7 +749,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -790,7 +785,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -809,6 +804,7 @@
 					"$(PROJECT_DIR)/XIME/Library/librime",
 					"$(PROJECT_DIR)/XIME/Library/librime/include",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -826,6 +822,7 @@
 					"$(PROJECT_DIR)/XIME/Library/librime",
 					"$(PROJECT_DIR)/XIME/Library/librime/include",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "$(RECOMMENDED_MACOSX_DEPLOYMENT_TARGET)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
